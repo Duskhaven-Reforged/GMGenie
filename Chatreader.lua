@@ -176,11 +176,7 @@ function ChatFrame_MessageEventHandler(self, event, ...)
                     local account, accountId, gmLevel = string.match(arg1, "Account: (.*) %(ID: (.*)%), GMLevel: (.*)");
                     local login, failedLogins = string.match(arg1, "Last Login: (.*) %(Failed Logins: (.*)%)");
                     local os_, latency = string.match(arg1, "OS: (.*) %- Latency: (.*) ms");
-                    -- TODO: fix e-mail format
-                    local email = string.match(arg1, "Mail: (.*)");
-                    if not email then
-                        email = string.match(arg1, "Email: (.*)");
-                    end
+                    local email = string.match(arg1, "%- Email: (.*)");
                     local ip, locked = string.match(arg1, "Last IP: (.*) %(Locked: (.*)%)");
                     local level = string.match(arg1, "Level: ([0-9]+)");
                     local race, class = string.match(arg1, "Race: (.*), (.*)");
@@ -216,11 +212,7 @@ function ChatFrame_MessageEventHandler(self, event, ...)
                     local account, accountId, gmLevel = string.match(arg1, "Account: (.*) %(ID: (.*)%), GMLevel: (.*)");
                     local login, failedLogins = string.match(arg1, "Last Login: (.*) %(Failed Logins: (.*)%)");
                     local os_, latency = string.match(arg1, "OS: (.*) %- Latency: (.*) ms");
-                    -- TODO: fix e-mail format
-                    local email = string.match(arg1, "Mail: (.*)");
-                    if not email then
-                        email = string.match(arg1, "Email: (.*)");
-                    end
+                    local email = string.match(arg1, "%- Email: (.*)");
                     local ip, locked = string.match(arg1, "Last IP: (.*) %(Locked: (.*)%)");
                     local level = string.match(arg1, "Level: ([0-9]+)");
                     local race, class = string.match(arg1, "Race: (.*), (.*)");
