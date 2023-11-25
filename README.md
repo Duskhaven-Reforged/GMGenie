@@ -9,8 +9,6 @@ Game Master Genie
 About GM Genie
 -------
 
-[![Screenshot of GM Genie](https://filedump.chocochaos.com/GitHub/GMGenie/GMGenie%200.7.thumb.jpg)](https://filedump.chocochaos.com/GitHub/GMGenie/GMGenie%200.7.jpg)
-
 GM Genie is an all-round GM addon for Trinitycore, aimed at making common tasks easier and quicker to accomplish. It provides tools for managing tickets, interacting with players on the server, building/spawning and much much more.
 
 GM Genie is not and is never going to be a collection of buttons just to eliminate the need to type commands. I have personally never understood how that is useful in any way, so please don't make requests to add button x for command y, it is not going to happen. However, if you have ideas for new functionality that could provide new possibilities or make existing tasks vastly easier, be sure to mention them!
@@ -20,11 +18,7 @@ GM Genie is not and is never going to be a collection of buttons just to elimina
 Installation Instructions
 -------
 
-*   **[Download most recent release (0.7.3).](https://filedump.chocochaos.com/GitHub/GMGenie/GMGenie%200.7.3.zip)**
-*   **[Download previous release (0.7.2)](https://filedump.chocochaos.com/GitHub/GMGenie/GMGenie%200.7.2.zip)**, for servers that still use the old playerinfo format (not updated for >1 year).
-*   **[Download older versions.](https://filedump.chocochaos.com/GitHub/GMGenie/old/)**
-
-Download the addon using one of the links above and extract it to the interface/addons directory in your WoW installation. When logging in, the addon should be enabled by default.
+Download the addon using GitHub's green "code" button above and extract it to the interface/addons directory in your WoW installation. Make sure the folder is called `GMGenie` When logging in, the addon should be enabled by default.
 
 **Supported emulators:** TrinityCore (3.3.5 and 4.3.4)
 **Supported client versions:** 3.3.5 and 4.3.4
