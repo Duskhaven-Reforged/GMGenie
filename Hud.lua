@@ -40,10 +40,17 @@ end
 ------------ HUD status functionality ------------
 --------------------------------------------------
 function GMGenie.Hud.checkStatus()
-    SendChatMessage(".gm", "GUILD");
     SendChatMessage(".gm chat", "GUILD");
     SendChatMessage(".gm visible", "GUILD");
     SendChatMessage(".whispers", "GUILD");
+    -- set status to false after half a second.
+    -- using `.gm` to get the status does not work on azerothcore. the error frame
+    -- will get a message if it's turned on, but only on login, not on UI reload
+    Chronos.schedule(0.5, function()
+        if not GMGenie.Hud.gm then
+            GMGenie.Hud.gmStatus(false);
+        end
+    end);
 end
 
 function GMGenie.Hud.gmStatus(status)
