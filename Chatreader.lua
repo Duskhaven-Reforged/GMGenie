@@ -168,10 +168,12 @@ function ChatFrame_MessageEventHandler(self, event, ...)
             else
                 if GMGenie.Spy.waitingForPin then
                     local offline, name1, _, guid = string.match(arg1, "Player  ?(.*) %|cffffffff%|Hplayer:(.*)%|h%[(.*)%]%|h%|r %(guid: (.*)%)");
+                    -- TODO: use the below to figure out the GM status
                     local phase = string.match(arg1, "Phase: (.*)");
                     local account, accountId, gmLevel = string.match(arg1, "Account: (.*) %(ID: (.*)%), GMLevel: (.*)");
                     local login, failedLogins = string.match(arg1, "Last Login: (.*) %(Failed Logins: (.*)%)");
                     local os, latency = string.match(arg1, "OS: (.*) %- Latency: (.*) ms");
+                    -- TODO: fix e-mail format
                     local email = string.match(arg1, "Mail: (.*)");
                     if not email then
                         email = string.match(arg1, "Email: (.*)");
@@ -181,7 +183,7 @@ function ChatFrame_MessageEventHandler(self, event, ...)
                     local race, class = string.match(arg1, "Race: (.*), (.*)");
                     local alive = string.match(arg1, "Alive %?: (.*)");
                     local money = string.match(arg1, "Money: (.*)");
-                    local map, area, zone = string.match(arg1, "Map: (.*), Area: (.*), Zone: (.*)");
+                    local map, zone, area = string.match(arg1, "Map: (.*), Zone: (.*), Area: (.*)");
                     local guild, guildId = string.match(arg1, "Guild: (.*) %(ID: (.*)%)");
                     local guildRank = string.match(arg1, "Rank: (.*)");
                     local note = string.match(arg1, "Note: (.*)");
